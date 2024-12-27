@@ -1,4 +1,6 @@
-pandas
-numpy
+coverage
 requests
 supabase-py
+pytest
+pytest-mock
+python-dotenv
