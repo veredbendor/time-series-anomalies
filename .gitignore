@@ -4,3 +4,8 @@ __pycache__/
 .env
 docker-compose.override.yml
 *.csv
+airflow/
+*.db
+*.cfg
+*.csv
+__pycache__/
