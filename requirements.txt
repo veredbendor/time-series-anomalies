@@ -1,8 +1,10 @@
 coverage
-requests
-supabase-py
+prophet
 psycopg2-binary
 pytest
 pytest-mock
 python-dotenv
-
+requests
+scikit-learn
+statsmodels
+supabase-py
