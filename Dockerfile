@@ -11,5 +11,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Default command for running tests
-# CMD ["pytest", "tests"]
+#CMD ["pytest", "tests"]
 CMD ["airflow", "webserver"]

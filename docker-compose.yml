@@ -2,8 +2,12 @@ services:
   app:
     build:
       context: .
+    environment:
+      PYTHONPATH: /app/src
     volumes:
       - .:/app
+    depends_on:
+      - weather-postgres
     command: pytest tests
 
   airflow-init:
@@ -55,5 +59,15 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  weather-postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: weather_data
+    ports:
+      - "5433:5432"
+    volumes:
+      - weather_postgres_data:/var/lib/postgresql/data
+
 volumes:
   postgres_data:
+  weather_postgres_data:
